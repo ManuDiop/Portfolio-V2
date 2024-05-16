@@ -1,0 +1,105 @@
+/* Règles générales */
+body {
+    font-size: 1em;
+    height: 100%;
+    width: 100%;
+    color: #211F26;
+    font-family: 'El Messiri', sans-serif;
+}
+
+/* Header design */
+
+/* Upper header */
+.header-container {
+    background-color: #FAF9FB;
+    padding-top: 1em;
+}
+
+.header-div {
+    margin: 0 1.5em 0 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.header-div-portrait {
+    height: 40px;
+    width: 40px;
+    border: solid #F2EFF3 1.5px;
+    border-radius: 50%;   
+}
+
+.header-div p {
+    padding-left: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    flex-grow: 6;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav img {
+    height: 30px;
+    width: 30px;
+}
+
+.header-nav__logo1,
+.header-nav__logo2 {
+    margin-right: 2em;
+}
+
+/* lower header */
+.header-section {
+    margin-left: 1.5em;
+    margin-top: 10em;
+    display: flex;
+    align-items: center;
+}
+
+.header-section-div {
+    display: inline-block;
+    flex-grow: 2;
+}
+
+.header-section-div span {
+    color: #65636D;
+}
+
+h1 {
+    font-size: 4em;
+    display: inline;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.header-section img {
+    height: 300px;
+    border: solid #F2EFF3 1.5px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 1.5em 1em 0;
+}
+
+/* Main */
+
+.main-container {
+    background-color: #F2EFF3;
+    padding-top: 1em;
+}
+
+.main-container h2 {
+    margin-left: 1.5em;
+    margin-top: 5em;
+}
+
+
+/* Footer */
+
+footer p {
+    position: absolute;
+    bottom: 1em;
+    left: 40%;
+}
