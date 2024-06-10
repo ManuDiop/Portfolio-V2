@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emmanuel Diop</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="./css/reset.css">
+            <link rel="stylesheet" href="./css/home.css">
+            <link rel="preconnect" href="https://fonts.bunny.net">
+            <link href="https://fonts.bunny.net/css?family=el-messiri:400,500,600,700" rel="stylesheet">
+        {% endblock %}
+            <script src="./js/app.js"></script>
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+
+{% include 'partials/nav.html.twig' %}
+{% block body %}{% endblock %}
+    
+{% block footer %}
+<footer class="footer-container">
+    <div class="footer-dispo">
+        <p>Emmanuel Diop Copyright - 2024</p>
+    </div>
+</footer>
+{% endblock %}
