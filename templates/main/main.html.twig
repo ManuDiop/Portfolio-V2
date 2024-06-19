@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    {# Ici mon menu de navigation twig nav #}
+
+<header class="header">
+    <section class="header-section">
+        <div class="header-section-div">
+            <h1>Emmanuel Diop</h1>
+            <h2>Développeur Web Full Stack<span>, PHP et Symfony</span></h2>
+            <div class="presentation-container">
+                <p>Passionné d'informatique et de nouvelles technologies depuis l'enfance, j'ai récemment entrepris de me former au développement Web et à la <span class="presentation-span">programmation informatique<span> pour en faire mon métier. </p>
+                <p>Au cours des six derniers mois, j'ai suivi une formation intensive auprès de l'école O'clock qui m'a donné de solides connaissances, relatives aux bases de la programmation, notamment la programmation orientée objet.</p>
+            </div>
+        </div>
+        <img src="./img/Photo-cv-noir_blanc-removebg-preview.png" alt="portrait">
+    </section>   
+</header>
+
+<main class="main-container"> 
+    <section class="s">
+        <h2 id="#1">Projects</h2>
+        <div class="cards">
+            <article class="card">
+                <div class="card__content">
+                    <img class="card__image" src="{{asset('img/pedro-sousa-GI5SZPQbS-c-unsplash.jpg')}}" alt="">
+                    <h3 class="card__title">O'P'tits Oignons</h3>
+                    <p class="card__desc">Une application Web dédiée à une consommation responsable et de proximité</p>
+                </div>
+                <div class="card__action">
+                    <a class="btn" href="">Découvrir</a>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card__content">
+                    <img class="card__image" src="{{asset('img/pedro-sousa-GI5SZPQbS-c-unsplash.jpg')}}" alt="">
+                    <h3 class="card__title">Tasklist</h3>
+                    <p class="card__desc">Une SAP en JS de gestion de tâche, avec API</p>
+                </div>
+                <div class="card__action">
+                    <a class="btn" href="">Découvrir</a>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card__content">
+                    <img class="card__image" src="{{asset('img/pedro-sousa-GI5SZPQbS-c-unsplash.jpg')}}" alt="">
+                    <h3 class="card__title">Larry June</h3>
+                    <p class="card__desc">Un site web dédié au rappeur de San Francisco</p>
+                </div>
+                <div class="card__action">
+                    <a class="btn" href="">Découvrir</a>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card__content">
+                    <img class="card__image" src="{{asset('img/pedro-sousa-GI5SZPQbS-c-unsplash.jpg')}}" alt="">
+                    <h3 class="card__title">O'P'tits Oignons</h3>
+                    <p class="card__desc">Une application Web dédiée à une consommation responsable et de proximité</p>
+                </div>
+                <div class="card__action">
+                    <a class="btn" href="">Découvrir</a>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card__content">
+                    <img class="card__image" src="{{asset('img/pedro-sousa-GI5SZPQbS-c-unsplash.jpg')}}" alt="">
+                    <h3 class="card__title">Tasklist</h3>
+                    <p class="card__desc">Une SAP en JS de gestion de tâche, avec API</p>
+                </div>
+                <div class="card__action">
+                    <a class="btn" href="">Découvrir</a>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card__content">
+                    <img class="card__image" src="{{asset('img/pedro-sousa-GI5SZPQbS-c-unsplash.jpg')}}" alt="">
+                    <h3 class="card__title">Larry June</h3>
+                    <p class="card__desc">Un site web dédié au rappeur de San Francisco</p>
+                </div>
+                <div class="card__action">
+                    <a class="btn" href="">Découvrir</a>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+
+    {# penser au lien d'ancrage #} 
+    
+{% endblock %}

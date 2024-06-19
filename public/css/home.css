@@ -63,15 +63,16 @@ body {
 /* lower header */
 .header-section {
     margin-left: 1.5em;
-    margin-top: 10em;
+    margin-top: 15em;
+    margin-right: 1.5em;
+    padding: 3em 0 3em 0;
     display: flex;
     align-items: center;
 }
 
 .header-section-div {
     display: inline-block;
-    flex-grow: 2;
-
+    flex-grow: 3;
 }
 
 .header-section-div span {
@@ -93,20 +94,70 @@ h2 {
     border-radius: 50%;
     position: relative;
     margin: 0 1.5em 1em 0;
+    flex-grow: 2;
 }
 
-/* Main */
+.presentation-container {
+    width: 90%;
+    margin: 2em 0.5em 2em 0.5em;
+    line-height: 1.2em;
+}
+
+.presentation-span {
+    font-weight: 900;
+}
+
+
+/* /!\ MAIN /!\ */
 
 .main-container {
-    background-color: #F2EFF3;
+    background-color: #FFFFFF;
     padding-top: 1em;
 }
 
 .main-container h2 {
-    margin-left: 1.5em;
-    margin-top: 5em;
+    margin-left: 1em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
 }
 
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    padding: 1rem;
+    width: 25%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #FAF9FB;
+}
+
+.card__title {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+  
+.card__action {
+    margin-top: 1rem;
+    display: flex;
+}
+  
+.card__action .btn {
+    margin-right: 0.25rem;
+    text-decoration: none;
+    color: #65636D;
+}
+
+.card__image {
+    width: 120px;
+    height: 120px;
+}
 
 /* Footer */
 
@@ -125,5 +176,6 @@ h2 {
     justify-content: center;
     padding-top: 0.5em;
 }
+
 
 
