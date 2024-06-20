@@ -14,6 +14,10 @@ body {
 .header-container {
     background-color: #FAF9FB;
     padding-top: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
+    width: 100%;
 }
 
 .header-div {
@@ -111,14 +115,13 @@ h2 {
 /* /!\ MAIN /!\ */
 
 .main-container {
-    background-color: #FFFFFF;
+    background-color: #E8E8E8;
     padding-top: 1em;
+    margin-bottom: 2em;
 }
 
 .main-container h2 {
-    margin-left: 1em;
-    margin-top: 2em;
-    margin-bottom: 0.5em;
+    margin : 2em 0 2em 1em;
 }
 
 .cards {
@@ -129,7 +132,7 @@ h2 {
 
 .card {
     padding: 1rem;
-    width: 25%;
+    width: 27%;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 1rem;
     display: flex;
@@ -177,5 +180,73 @@ h2 {
     padding-top: 0.5em;
 }
 
+/* MEDIA QUERIES */
 
+@media (max-width: 768px) {
+    .header-div {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .header-div-a {
+        margin: 10px 0;
+        font-size: 1.2em;
+    }
+
+    .header-nav {
+        flex-direction: column;
+    }
+
+    .header-nav_link, .header-nav__logo1, .header-nav__logo2 {
+        font-size: 1em;
+        margin: 5px 0;
+    }
+
+    .header-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-section img {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-div-a {
+        font-size: 1em;
+    }
+
+    .header-nav_link, .header-nav__logo1, .header-nav__logo2 {
+        font-size: 0.9em;
+    }
+
+    .header-section img {
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .card {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
