@@ -67,7 +67,7 @@ body {
 /* lower header */
 .header-section {
     margin-left: 1.5em;
-    margin-top: 15em;
+    margin-top: 10em;
     margin-right: 1.5em;
     padding: 3em 0 3em 0;
     display: flex;
@@ -96,15 +96,15 @@ h2 {
     height: 300px;
     border: solid #F2EFF3 1.5px;
     border-radius: 50%;
-    position: relative;
     margin: 0 1.5em 1em 0;
-    flex-grow: 2;
+    flex-grow: 3;
 }
 
 .presentation-container {
     width: 90%;
     margin: 2em 0.5em 2em 0.5em;
-    line-height: 1.2em;
+    line-height: 1.4em;
+    font-size: 1.1em;
 }
 
 .presentation-span {
@@ -115,7 +115,7 @@ h2 {
 /* /!\ MAIN /!\ */
 
 .main-container {
-    background-color: #E8E8E8;
+    
     padding-top: 1em;
     margin-bottom: 2em;
 }
@@ -127,40 +127,70 @@ h2 {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    gap: 20px;
+    justify-content: center;
 }
 
 .card {
-    padding: 1rem;
-    width: 27%;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #FAF9FB;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card__title {
-    margin: 0.5rem 0;
-    font-weight: bold;
-}
-  
-.card__action {
-    margin-top: 1rem;
-    display: flex;
-}
-  
-.card__action .btn {
-    margin-right: 0.25rem;
-    text-decoration: none;
-    color: #65636D;
+.card__content {
+    padding: 20px;
 }
 
 .card__image {
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
+
+.card__title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card__desc {
+    font-size: 1em;
+    color: #555;
+}
+
+.card__action {
+    padding: 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #646464;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card__image {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+
 
 /* Footer */
 
