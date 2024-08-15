@@ -28,16 +28,18 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="cards">
-            <article class="card">
-                <div class="card__content">
-                    <img class="card__image" src="{{asset('img/panier-fruits-legumes-bordeaux.jpg')}}" alt="">
-                    <h3 class="card__title">O'P'tits Oignons</h3>
-                    <p class="card__desc">Une application Web dédiée à une consommation responsable et de proximité</p>
-                </div>
-                <div class="card__action">
-                    <a class="btn" href="">Découvrir</a>
-                </div>
-            </article>
+            {% for project in projectList %}
+                <article class="card">
+                    <div class="card__content">
+                        <img class="card__image" src="{{ asset('img/' ~ project.image) }}" alt="">
+                        <h3 class="card__title">{{ project.title }}</h3>
+                        <p class="card__desc">{{project.description}}</p>
+                    </div>
+                    <div class="card__action">
+                        <a class="btn" href="{{ project.url }}">Découvrir</a>
+                    </div>
+                </article>
+            {% endfor %}
             <article class="card">
                 <div class="card__content">
                     <img class="card__image" src="{{asset('img/task-manager.png')}}" alt="">
