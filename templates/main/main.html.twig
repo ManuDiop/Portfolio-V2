@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    {# Ici mon menu de navigation twig nav #}
+    {# Ici mon menu de navigation twig nav include dans le base.html.twig#}
 
 <header class="header">
     <section class="header-section">
@@ -15,7 +15,7 @@
                 <p>Passionné d'informatique et de nouvelles technologies depuis l'enfance, j'ai récemment entrepris de me former au développement Web et à la <span class="presentation-span">programmation informatique</span> afin d'en faire mon métier. </p>
                 <br>
                 <p>Au cours des six derniers mois, j'ai suivi une formation intensive auprès de l'école O'clock qui m'a donné de solides connaissances, relatives à la programmation informatique, notamment la programmation orientée objet. Je suis capable de mener à bien un projet de sa conception à sa livraison. 
-                <p>J'utilise les langages HTML, CSS et JS du côté du navigateur et PHP, son framework Symfony et SQL, côté serveur. </p>
+                <p>J'utilise les langages HTML, CSS et JS du côté du navigateur et PHP, son framework Symfony et SQL, côté serveur. Plus récemment, j'ai entrepris de me former sur le langage Python et son framework Django.</p>
                 <br>
                 <p>Je suis quelqu'un de curieux, toujours désireux d'apprendre et de progresser. De cette façon, je peux me former de façon autonome à n'importe quel langage informatique afin de répondre aux attentes techniques de recruteurs ou de clients. Dans cette idée, mon souhait est de réaliser une alternance pour obtenir le diplôme de Développeur Concepteur d'Applications. Je suis à la recherche d'une entreprise aux côtés de laquelle j'aimerais poursuivre ma montée en compétences et offrir ma force de travail.</p>
             </div>
@@ -26,7 +26,7 @@
 
 <main class="main-container"> 
     <section id="projects">
-        <h2>Projects</h2>
+        <h2>Projets récents</h2>
         <div class="cards">
             {% for project in projectList %}
                 <article class="card">
@@ -36,7 +36,7 @@
                         <p class="card__desc">{{project.description}}</p>
                     </div>
                     <div class="card__action">
-                        <a class="btn" href="{{ project.url }}">Découvrir</a>
+                        <a class="btn" target="blank" href="{{ project.url }}">Découvrir</a>
                     </div>
                 </article>
             {% endfor %}
@@ -94,9 +94,35 @@
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <div class="form">
+        <h2>Contactez-moi</h2>
+        <div class="form-container">
+            <p>Vous avez un projet ou une question ?</p> 
+            <p>N'hésitez pas à me contacter en remplissant le formulaire ci-dessous.</p>
 
+            {{ form_start(form) }}
+                <div class="form-group">
+                {{ form_row(form.lastname) }}
+            </div>
+            <div class="form-group">
+                {{ form_row(form.firstname) }}
+            </div>
+            <div class="form-group">
+                {{ form_row(form.email) }}
+            </div>
+            <div class="form-group">
+                {{ form_row(form.message) }}
+            </div>
+            <div class="form-group">
+                {{ form_widget(form.submit) }}
+            </div>
+            {{ form_end(form) }}
+
+            {# Affichage des messages flash après soumission #}
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}    
         </div>
     </section>
 
